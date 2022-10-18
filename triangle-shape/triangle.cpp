@@ -8,7 +8,11 @@ int main(){
     cout<<"Enter the symbol you want to print: ";
     cin>>symbol;
     for(int i=1;i<=length;i++){
+
         for(int j=1;j<=i;j++){
+                for(int space = length; space >= 0 ; space--){
+            cout<<" ";
+        }
             cout<<symbol;
         }
         cout<<endl;
