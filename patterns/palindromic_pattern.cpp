@@ -2,7 +2,8 @@
 using namespace std;
 
 int main(){
-   int n;
+    int n;
+    cout<<"enter a number: ";
     cin>>n;
 
     for(int i =1; i<=n; i++){
@@ -15,7 +16,7 @@ int main(){
             cout<<k--<<" ";
         }
         k =2;
-        for(;j<=5;j++){
+        for(;j<=n+i-1;j++){
             cout<<k++<<" ";
         }
         cout<<endl;
