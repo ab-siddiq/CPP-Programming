@@ -7,6 +7,12 @@ int main(){
     cin>>a;
     cout<<"enter the ending range: ";
     cin>>b;
+    int j;
+    for(j=0;j<2;j++){
+        cout<<j<<"inside"<<endl;
+
+    }
+    cout<<"outside"<<j<<endl;
 
     for(int num=a; num<b;num++){
         int i;
