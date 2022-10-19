@@ -31,6 +31,33 @@ int main(){
     for(int i=1;i<=rows;i++){
         for(int j=1;j<=rows;j++){
             if(j<=rows-i){
+                cout<<"  ";
+            }else{
+                cout<<symbol<<" ";
+            }
+        }
+
+        cout<<endl;
+    }
+    //4. 180 degree reverse triangle
+    cout<<"************triangle 180 degree************"<<endl;
+    for(int i=rows;i>0;i--){
+        for(int j=1;j<=rows;j++){
+            if(j<=rows-i){
+                cout<<"  ";
+            }else{
+                cout<<symbol<<" ";
+            }
+        }
+
+        cout<<endl;
+    }
+
+    //5. center triangle
+    cout<<"************center triangle************"<<endl;
+    for(int i=1;i<=rows;i++){
+        for(int j=1;j<=rows;j++){
+            if(j<=rows-i){
                 cout<<" ";
             }else{
                 cout<<symbol<<" ";
@@ -39,8 +66,8 @@ int main(){
 
         cout<<endl;
     }
-    //3. 180 degree reverse triangle
-    cout<<"************triangle 180 degree************"<<endl;
+    //6. center reverse triangle
+    cout<<"************center reverse triangle************"<<endl;
     for(int i=rows;i>0;i--){
         for(int j=1;j<=rows;j++){
             if(j<=rows-i){
