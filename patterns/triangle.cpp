@@ -18,6 +18,24 @@ int main(){
         }
         cout<<endl;
     }
+    //number trianlge
+    cout<<"************number triangle************"<<endl;
+    for(int i=1;i<=rows;i++){
+        for(int j=i;j<=rows;j++){
+            cout<<i<<" ";
+        }
+        cout<<endl;
+    }
+     //floyds's trianlge
+    cout<<"************floyd's triangle************"<<endl;
+    int count=1;
+    for(int i=1;i<=rows;i++){
+        for(int j=i;j<=rows;j++){
+            cout<<count<<" ";
+            count++;
+        }
+        cout<<endl;
+    }
     //2. reverse triangle
     cout<<"************ reverse triangle************"<<endl;
     for(int i=rows;i>0;i--){
@@ -46,7 +64,7 @@ int main(){
             if(j<=rows-i){
                 cout<<"  ";
             }else{
-                cout<<symbol<<" ";
+                cout<<symbol<<"  ";
             }
         }
 
