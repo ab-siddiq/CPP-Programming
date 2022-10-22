@@ -16,4 +16,4 @@ int main(){
     int max = arr[0];
     minMax(arr,5,&min,&max);
     cout<<"Min: "<<min<<endl<<"Max: "<<max;
-    }
+}
