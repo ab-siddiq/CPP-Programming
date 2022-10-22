@@ -9,4 +9,4 @@ void print(void*ptr,char type){
 }
 ```
 - ``` (int*)ptr ``` is used for type casting
--  ``` *((int*)ptr) ``` to derence the pointer
+-  ``` *((int*)ptr) ``` to dereference the pointer
