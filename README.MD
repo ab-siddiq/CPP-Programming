@@ -1,4 +1,6 @@
-//structre of a void pointer
+# Pointer
+- One of the common use of pointer is with array
+### Structre of a void pointer
 ```
 void print(void*ptr,char type){
     switch (type){
@@ -8,5 +10,6 @@ void print(void*ptr,char type){
     
 }
 ```
+### Description
 - ``` (int*)ptr ``` is used for type casting
 -  ``` *((int*)ptr) ``` to dereference the pointer
