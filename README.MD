@@ -25,4 +25,4 @@ int main(){
     cout<<&arr[0]<<endl;
 }
 ```
-- `cout<<arr<<endl;` will print the address of first element of the array. You can match trying `cout<<&arr[0]<<endl;`
+- `cout<<arr<<endl;` will print the address of first element of the array. You can match trying `cout<<&arr[0]<<endl;`. That means that the name of an array is the address of first element of that array.
