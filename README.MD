@@ -51,3 +51,4 @@ int main(){
 }
 ```
 - `minMax(arr,5,&min,&max);` in this function `&min. &max` means that the function is passing reference of those two variables. In this way we can directaly change the value of that variable without returing anything from the function whom it is passed.
+- The way passing reference using pointer a function acheive the ability to return multiple value;
