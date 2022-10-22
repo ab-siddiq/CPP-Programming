@@ -1,8 +1,19 @@
 # Array
-- 
+- An array is type of collection which stores elements in continuous memory. That means an store it's elements one after the another.
+## Advantage
+- Accessing of array elements are very fast as they are store one after another
+## Diadvantage
+- But problem is when we insert or delete any element to an array the process is slow.
+- Size of the array had to be known at compile time
+- Size of the array cannot be change once declared. But in dynamic array size of array can be change during compile time.
+### Array dynamic memory allocation and deallocation
+- `int* arr = new int[size];` in this way we can create dynamic memory allocation. Here keyword `new` allocate a memory for `int* arr` pointer. `int[size]` variable `size` will be the size of the dynamic array.
+- There are two ways to deallocate or delete dynamic array while their is no need of that array in order to free space
+    - `delete[] arr;` is one way. But in this way it may cause system crush
+    - `arr = NULL;` is the best practice to deallocate dynamic array
 # Pointer
 - One of the common use of pointer is with array
-### Structre of a void pointer
+## Structre of a void pointer
 ```C++
 void print(void*ptr,char type){
     switch (type){
@@ -17,7 +28,7 @@ void print(void*ptr,char type){
 - ` (int*)ptr ` is used for type casting
 -  ` *((int*)ptr) ` to dereference the pointer
 
-### Pointer array
+## Pointer array
 ```C++
 int main(){
     int arr[5] = {1,2,3,4,5};
