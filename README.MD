@@ -1,5 +1,9 @@
-//structre of a void pointer
-```
+# Array
+- 
+# Pointer
+- One of the common use of pointer is with array
+### Structre of a void pointer
+```C++
 void print(void*ptr,char type){
     switch (type){
         case 'i': cout<<*((int*)ptr)<<endl;break;
@@ -8,5 +12,31 @@ void print(void*ptr,char type){
     
 }
 ```
-- ``` (int*)ptr ``` is used for type casting
--  ``` *((int*)ptr) ``` to derence the pointer
+
+- `void print(void*ptr,char type)` here in this function, parameter `void*ptr` will receive any type of value passed by and the parameter `char type` will recieve the type of that variable
+- ` (int*)ptr ` is used for type casting
+-  ` *((int*)ptr) ` to dereference the pointer
+
+### Pointer array
+```C++
+int main(){
+    int arr[5] = {1,2,3,4,5};
+    cout<<arr<<endl;
+    cout<<&arr[0]<<endl;
+}
+```
+- `cout<<arr<<endl;` will print the address of first element of the array. You can match trying `cout<<&arr[0]<<endl;`. That means that the name of an array is the address of first element of that array.
+
+We can access array elements using point
+```C++
+for(int i =0; i<5;i++){
+        cout<<"Num "<<i+1<<": ";
+        cin>>*(arr+i);
+    }
+```
+- `cin>>*(arr+i);` `*(arr+i)` means that assign value in the i'th position of the array. It is exactly same as what `arr[i]` do.
+```C++
+for(int i=0;i<5;i++){
+        cout<<arr[i]<<" ";
+    }
+```
