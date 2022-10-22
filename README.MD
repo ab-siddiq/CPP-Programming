@@ -40,3 +40,14 @@ for(int i=0;i<5;i++){
         cout<<arr[i]<<" ";
     }
 ```
+
+```C++
+int main(){
+    int arr[5] = {1,3,9,-2,6};
+    int min = arr[0];
+    int max = arr[0];
+    minMax(arr,5,&min,&max);
+    cout<<"Min: "<<min<<endl<<"Max: "<<max;
+}
+```
+- `minMax(arr,5,&min,&max);` in this function `&min. &max` means that the function is passing reference of those two variables. In this way we can directaly change the value of that variable without returing anything from the function whom it is passed.
