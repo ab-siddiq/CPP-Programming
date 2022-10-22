@@ -17,6 +17,7 @@ int main(){
     for(int i=0;i<n;i++){
         cin>>arr[i];
     }
+
     //second approach to find min mx
     int maxNum = arr[0];
     int minNum =arr[1];
