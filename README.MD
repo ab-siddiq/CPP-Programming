@@ -76,3 +76,11 @@ void minMax(int arr[],int size,int* min, int* max){
 ```
 - The way passing reference using pointer a function acheive the ability to return multiple value;
 - Using pointer we can return muliple value from a function like above function ex- `minMax(int arr[],int size,int* min, int* max)`
+# Linked list
+- A linked list is a data structure which means that it is used to store data and organize data. But unlike arrays it is not store data continouly or one after another.
+## Advantage
+- Linked list has dynamic memory size where array has fixed size
+- Data insert and delete are easy
+## Disadvantage
+- Random access of linked list are not allowed
+- It need more memory as it have to store two thing. One is data and another is the memory address to the next element.
