@@ -26,3 +26,17 @@ int main(){
 }
 ```
 - `cout<<arr<<endl;` will print the address of first element of the array. You can match trying `cout<<&arr[0]<<endl;`. That means that the name of an array is the address of first element of that array.
+
+We can access array elements using point
+```C++
+for(int i =0; i<5;i++){
+        cout<<"Num "<<i+1<<": ";
+        cin>>*(arr+i);
+    }
+```
+- `cin>>*(arr+i);` `*(arr+i)` means that assign value in the i'th position of the array. It is exactly same as what `arr[i]` do.
+```C++
+for(int i=0;i<5;i++){
+        cout<<arr[i]<<" ";
+    }
+```
