@@ -90,3 +90,35 @@ void minMax(int arr[],int size,int* min, int* max){
 ## Disadvantage
 - Random access of linked list are not allowed
 - It need more memory as it have to store two thing. One is data and another is the memory address to the next element.
+```C++
+//custom class Node, name can be anything but most commonly name Node is used
+class Node{
+    public:
+        int value; //for the value of a linked list
+        Node* next; //for the pointer of a linked list which will point to the next element of a linked list
+};
+//function that print the values of a linked list
+void printList(Node*n){
+    while(n != NULL){
+        cout<<n->value;
+        n = n->next;
+    }
+}
+
+int main(){
+    //creating theree value of a linked list
+    Node* head = new Node();
+    Node* second = new Node();
+    Node* third = new Node();
+    //assiging values and the pointer of next element of a linked list
+    head->value = 1;
+    head->next = second;
+    second-> value = 2;
+    second->next = third;
+    third->value = 3;
+    third->next = NULL;
+    //passing the head reference to the linked list print function to print values
+    printList(head);
+
+}
+```
