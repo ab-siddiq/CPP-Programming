@@ -1,5 +1,5 @@
 # Array
-- An array is type of collection which stores elements in continuous memory. That means an store it's elements one after the another.
+- An array is type of collection which stores elements in continuous memory. That means an array store it's elements one after the another.
 ## Advantage
 - Accessing of array elements are very fast as they are store one after another
 ## Diadvantage
@@ -13,7 +13,7 @@
     - `arr = NULL;` is the best practice to deallocate dynamic array
 # Pointer
 - One of the common use of pointer is with array
-## Structre of a void pointer
+## Structre of a void pointer/ dynamic type pointer
 ```C++
 void print(void*ptr,char type){
     switch (type){
