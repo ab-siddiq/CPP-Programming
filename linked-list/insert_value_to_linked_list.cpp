@@ -34,6 +34,18 @@ void insertEndOfNode(Node** head, int newValue){
     //insert newNode to last
     last->next = newNode;
 }
+void insertAnyPointOfNode(Node* previous,int newValue){
+    //check empty
+    if(previous ==NULL){
+        cout<<"Wrong process!";
+    }
+    //create new node
+    Node* newNode = new Node();
+    newNode->value = newValue;
+    //insert after previous
+    newNode->next = previous->next;
+    previous->next = newNode;
+}
 void printNode(Node* n){
     
     while(n!=NULL){
@@ -57,6 +69,8 @@ int main(){
     insertBeginingOfNode(&head,-1);
     insertBeginingOfNode(&head,-2);
     insertBeginingOfNode(&head,-3);
+    insertAnyPointOfNode(third,5);
+    insertAnyPointOfNode(head,5);
     insertEndOfNode(&head,4);
     printNode(head);
 
