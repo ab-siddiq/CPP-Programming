@@ -12,15 +12,33 @@ void insertBeginingOfNode(Node** head,int newValue){
     newNode->value = newValue;
     //move the head to newNode
     newNode->next = *head;
+    //current is newNode
     *head = newNode;
     
+}
+void insertEndOfNode(Node** head, int newValue){
+    //create new node
+    Node *newNode = new Node();
+    newNode->value = newValue;
+    newNode->next = NULL;
+    //check empty
+    if(*head==NULL){
+        *head=newNode;
+        return;
+    }
+    //find last node
+    Node* last = *head;
+    while(last->next !=NULL){
+        last = last->next;
+    }
+    //insert newNode to last
+    last->next = newNode;
 }
 void printNode(Node* n){
     
     while(n!=NULL){
         cout<<n->value<<"=>";
         n = n->next;
-        cout<<n->next;
     }
 
 }
@@ -39,6 +57,7 @@ int main(){
     insertBeginingOfNode(&head,-1);
     insertBeginingOfNode(&head,-2);
     insertBeginingOfNode(&head,-3);
+    insertEndOfNode(&head,4);
     printNode(head);
 
 
