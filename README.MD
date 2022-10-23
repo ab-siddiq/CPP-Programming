@@ -124,3 +124,27 @@ int main(){
 
 }
 ```
+# Stack
+- FILO-First In Last Out
+- LIFO-Lasr In First Out
+- LCFS-Last Come First Serve
+- Ex- Undo operation in editior or word, Back button
+- Five function that are associated with queue
+    - push()
+    - pop()
+    - top()
+    - empty()
+    - size()
+# Queue
+- FIFO-First In First Out
+- FCFS-First Come First Serve
+### When we need queue?
+- WHen we need things happen exact order they were called but computer cannot keep up speed and execute those thing first enough first enough then we need to put those things in a queue.
+- Ex-The way printer printed the paper
+- Function associated to queue
+    - push()
+    - pop()
+    - front()
+    - back()
+    - empty()
+    - size()
