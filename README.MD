@@ -2,6 +2,7 @@
 - An array is type of collection which stores elements in continuous memory. That means an array store it's elements one after the another.
 ## Advantage
 - Accessing of array elements are very fast as they are store one after another
+- Access of array elements can be direct. We need the array name and the index of that element.
 ## Diadvantage
 - But problem is when we insert or delete any element to an array the process is slow.
 - Size of the array had to be known at compile time
