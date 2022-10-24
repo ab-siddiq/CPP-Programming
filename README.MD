@@ -124,7 +124,11 @@ int main(){
 
 }
 ```
-# Stack
+# Data Structure
+- Data Structure is a way of `data organization`, `management` and `storage` format that enable `efficient access` and `modification`.
+- In a simple word, data structure is a way, in which data is stored in a computer.
+
+## Stack
 - FILO-First In Last Out
 - LIFO-Lasr In First Out
 - LCFS-Last Come First Serve
@@ -135,7 +139,7 @@ int main(){
     - top()
     - empty()
     - size()
-# Queue
+## Queue
 - FIFO-First In First Out
 - FCFS-First Come First Serve
 ### When we need queue?
