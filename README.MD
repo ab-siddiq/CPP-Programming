@@ -78,7 +78,9 @@ void minMax(int arr[],int size,int* min, int* max){
 - The way passing reference using pointer a function acheive the ability to return multiple value;
 - Using pointer we can return muliple value from a function like above function ex- `minMax(int arr[],int size,int* min, int* max)`
 # Linked list
-- A linked list is a data structure which means that it is used to store data and organize data. But unlike arrays it is not store data continouly or one after another.
+- A linked list is a linear data structure which store list of values.
+- Linked list is used to store data and organize data.
+- But unlike arrays it is not store data continouly or one after another.
 - Each element of a link list has two thing
     - `First one is the value`
     - `Second one is the address or pointer to the next element`
@@ -122,3 +124,31 @@ int main(){
 
 }
 ```
+# Data Structure
+- Data Structure is a way of `data organization`, `management` and `storage` format that enable `efficient access` and `modification`.
+- In a simple word, data structure is a way, in which data is stored in a computer.
+
+## Stack
+- FILO-First In Last Out
+- LIFO-Lasr In First Out
+- LCFS-Last Come First Serve
+- Ex- Undo operation in editior or word, Back button
+- Five function that are associated with queue
+    - push()
+    - pop()
+    - top()
+    - empty()
+    - size()
+## Queue
+- FIFO-First In First Out
+- FCFS-First Come First Serve
+### When we need queue?
+- WHen we need things happen exact order they were called but computer cannot keep up speed and execute those thing first enough first enough then we need to put those things in a queue.
+- Ex-The way printer printed the paper
+- Function associated to queue
+    - push()
+    - pop()
+    - front()
+    - back()
+    - empty()
+    - size()
