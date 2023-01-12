@@ -14,8 +14,11 @@ class node{
 };
 //insert at head
 void InsertAtHead(node* &head,int val){
+    //create new node
     node* n = new node(val);
+    //next of n node will point to the head
     n->next=head;
+    //change head to new node
     head=n;
 }
 //insert at tail
