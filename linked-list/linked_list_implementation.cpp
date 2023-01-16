@@ -1,5 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
+//create a node
 class node
 {
 public:
@@ -69,6 +70,34 @@ public:
         //move index-1 next pointer to the newNode next (connext idnex-1 next with newNode)
         newNode->next=a->next;
         //point index-1 next pointer to the newNode (connecting to the new node)
+        a->next=newNode;
+    }
+
+    //insert after value
+    void InsertAfterValue(int value, int newValue){
+        //create a temporary pointer to traverse 
+        node* a = head;
+        //traverse through values to find the expected value
+        while(a!=NULL){
+            //if value found return from the loop
+            if(a->data==value){
+                break;
+            }
+            //move pointer to the next node
+            a=a->next;
+        }
+        //if pointer having value null return a message
+        if(a==NULL){
+            cout<<value<<" does not exist in the linked list!\n";
+            return;
+        }
+        //increament the size of the linked list
+        size++;
+        //crate a new node for the new value
+        node* newNode = CreateNewNode(newValue);
+        //move point a pointer next to newNode
+        newNode->next=a->next;
+        //point newNode pointer to a-next to tract newNode
         a->next=newNode;
     }
 
@@ -162,10 +191,10 @@ public:
 int main()
 {
     LinkedList l;
+    l.InsertAtHead(1);
+    l.InsertAtHead(2);
+    l.InsertAtHead(3);
     l.InsertAtHead(4);
-    l.InsertAtHead(5);
-    l.InsertAtHead(4);
-    l.InsertAtHead(5);
     cout<<l.getSize()<<"\n";
     l.Traverse();
 
@@ -178,6 +207,10 @@ int main()
     l.Traverse();
 
     l.DeleteAtAnyIndex(2);
+    cout<<l.getSize()<<"\n";
+    l.Traverse();
+
+    l.InsertAfterValue(2,12);
     cout<<l.getSize()<<"\n";
     l.Traverse();
 }
