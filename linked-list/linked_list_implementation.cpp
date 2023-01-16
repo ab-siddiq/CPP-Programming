@@ -43,6 +43,7 @@ public:
         a->next = head;
         head = a;
     }
+
     //insert at any index
     void InsertAtAnyIndex(int index, int value){
         //pointing a pointer to the head
@@ -65,11 +66,23 @@ public:
         }
         //create a new node
         node* newNode = CreateNewNode(value);
-        //point the newNode to the index-1 node next
+        //move index-1 next pointer to the newNode next (connext idnex-1 next with newNode)
         newNode->next=a->next;
-        //point index-1 pointer to the newNode
+        //point index-1 next pointer to the newNode (connecting to the new node)
         a->next=newNode;
-    
+    }
+
+    //delete from head
+    void DeleteAtHead(){
+        if(head==NULL){
+            return;
+        }
+        size--;
+        node* a = head;
+        //point head to current head next
+        head=a->next;
+        //free disconnected memory
+        delete a;
     }
     // print the link list
     void Traverse()
@@ -82,6 +95,7 @@ public:
         }
         cout << "\n";
     }
+
     // search single value
     int SearchDistinctValue(int value)
     {
@@ -98,10 +112,12 @@ public:
         }
         return -1;
     }
+
     //get size of the link list
     int getSize(){
         return size;
     }
+
     // search all possible occurence
     void SearchAllValue(int value)
     {
@@ -128,6 +144,9 @@ int main()
     cout<<l.getSize()<<"\n";
     l.Traverse();
     l.InsertAtAnyIndex(2,20);
+    cout<<l.getSize()<<"\n";
+    l.Traverse();
+    l.DeleteAtHead();
     cout<<l.getSize()<<"\n";
     l.Traverse();
 }
