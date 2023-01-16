@@ -84,6 +84,31 @@ public:
         //free disconnected memory
         delete a;
     }
+
+    //delete from any index
+    void DeleteAtAnyIndex(int index){
+        if(index<0 || index>size-1){
+            return;
+        }
+        if(index==0){
+            DeleteAtHead();
+            return;
+        }
+        size--;
+        node* a = head;
+        int current_index=0;
+        while(current_index!=index-1){
+            a=a->next;
+            current_index++;
+        }
+        // a is pointing to index-1 and b is pointing to index
+        node* b = a->next;
+        //move index-1 next to index next
+        a->next=b->next;
+        //erase memory of delated node
+        delete b;
+    }
+
     // print the link list
     void Traverse()
     {
@@ -143,10 +168,16 @@ int main()
     l.InsertAtHead(5);
     cout<<l.getSize()<<"\n";
     l.Traverse();
-    l.InsertAtAnyIndex(2,20);
+
+    l.InsertAtAnyIndex(4,20);
     cout<<l.getSize()<<"\n";
     l.Traverse();
+
     l.DeleteAtHead();
+    cout<<l.getSize()<<"\n";
+    l.Traverse();
+
+    l.DeleteAtAnyIndex(2);
     cout<<l.getSize()<<"\n";
     l.Traverse();
 }
