@@ -10,9 +10,11 @@ class LinkedList
 {
 public:
     node *head;
+    int size;
     LinkedList()
     {
         head = NULL;
+        size=0;
     }
     // create new node with data=value and next=null
     node *CreateNewNode(int value)
@@ -25,6 +27,7 @@ public:
     // insert new value at head
     void InsertAtHead(int value)
     {
+        size++;
         node *a = CreateNewNode(value);
         if (head == NULL)
         {
@@ -63,6 +66,10 @@ public:
         }
         return -1;
     }
+    //get size of the link list
+    int getSize(){
+        return size;
+    }
     // search all possible occurence
     void SearchAllValue(int value)
     {
@@ -86,7 +93,7 @@ int main()
     l.InsertAtHead(5);
     l.InsertAtHead(4);
     l.InsertAtHead(5);
-
+    cout<<l.getSize()<<"\n";
     l.Traverse();
     l.SearchAllValue(5);
 }
