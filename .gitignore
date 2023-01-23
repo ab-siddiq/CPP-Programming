@@ -1,3 +1,5 @@
 *.o
 *.exe
 test.cpp
+doubly_linked_list_practice.cpp
+linked_list_practice.cpp
