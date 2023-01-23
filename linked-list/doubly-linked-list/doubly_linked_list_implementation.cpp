@@ -76,6 +76,11 @@ class DoublyLinkedList{
             cout<<a->data<<" ";
             a=a->next;
         }
+        cout<<"\n";
+    }
+    void getSize(){
+        cout<<size<<"\n";
+        return;
     }
 };
 int main(){
@@ -83,4 +88,5 @@ int main(){
     dl.InsertAtHead(10);
     dl.InsertAtHead(20);
     dl.Traverse();
+    dl.getSize();
 }
