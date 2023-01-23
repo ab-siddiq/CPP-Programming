@@ -112,6 +112,7 @@ class DoublyLinkedList{
         if(c!=NULL){
             c->prev=b;
         }
+        delete a;
         if(index==0){
             head=c;
         }
@@ -139,7 +140,7 @@ int main(){
     dl.InsertAtAnyIndex(2,40);
     dl.Traverse();
     dl.getSize();
-    dl.DeleteFromAnyIndex(2);
+    dl.DeleteFromAnyIndex(0);
     dl.Traverse();
     dl.getSize();
 }
