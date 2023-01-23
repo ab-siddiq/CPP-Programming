@@ -94,6 +94,29 @@ class DoublyLinkedList{
          a->next = newNode;
          size++;
     }
+
+    //delete from any index
+    void DeleteFromAnyIndex(int index){
+        node* a = head;
+        int curr_index=0;
+        while (curr_index!=index)
+        {
+            a=a->next;
+            curr_index++;
+        }
+        node* b = a->prev;
+        node* c = a->next;
+        if(b!=NULL){
+            b->next=c;
+        }
+        if(c!=NULL){
+            c->prev=b;
+        }
+        if(index==0){
+            head=c;
+        }
+        size--;
+    }
     void Traverse(){
         node* a = head;
         while(a!=NULL){
@@ -114,6 +137,9 @@ int main(){
     dl.InsertAtHead(30);
     dl.Traverse();
     dl.InsertAtAnyIndex(2,40);
+    dl.Traverse();
+    dl.getSize();
+    dl.DeleteFromAnyIndex(2);
     dl.Traverse();
     dl.getSize();
 }
