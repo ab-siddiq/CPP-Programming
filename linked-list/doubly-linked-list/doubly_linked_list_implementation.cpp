@@ -70,6 +70,30 @@ class DoublyLinkedList{
         //point head to new node
         head=newNode;
     }
+
+    //insert at any index
+    void InsertAtAnyIndex(int index, int data){
+        node* a = head;
+        if(index>size){
+            return;
+        }
+        if(index==0){
+            InsertAtHead(data);
+            return;
+        }
+        int curr_index=0;
+        while(curr_index!=index-1){
+            a=a->next;
+            curr_index++;
+        }
+         node* newNode = CreateNewNode(data);
+         newNode->next = a->next;
+         newNode->prev = a;
+         node* b = a->next;
+         b->prev = newNode;
+         a->next = newNode;
+         size++;
+    }
     void Traverse(){
         node* a = head;
         while(a!=NULL){
@@ -87,6 +111,9 @@ int main(){
     DoublyLinkedList dl;
     dl.InsertAtHead(10);
     dl.InsertAtHead(20);
+    dl.InsertAtHead(30);
+    dl.Traverse();
+    dl.InsertAtAnyIndex(2,40);
     dl.Traverse();
     dl.getSize();
 }
