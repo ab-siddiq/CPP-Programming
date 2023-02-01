@@ -45,4 +45,6 @@ int main(){
     //delete at any position
     DeleteAtAnyPosition(l,2);
     print(l);
+    //get size
+    cout<<l.size()<<"\n";
 }
