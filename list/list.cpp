@@ -11,6 +11,11 @@ void print(list<int> l){
     cout<<"\n";
     
 }
+void InsertAtAnyPosition(list<int>&l,int index,int value){
+    auto it = l.begin();
+    advance(it,index);
+    l.insert(it,22);
+}
 int main(){
     list<int> l;
     //insert at head O(1)
@@ -28,5 +33,8 @@ int main(){
     print(l);
     //delete from tail O(1)
     l.pop_back();
+    print(l);
+    //insert at any position
+    InsertAtAnyPosition(l,2,33);
     print(l);
 }
