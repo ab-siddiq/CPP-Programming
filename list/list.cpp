@@ -14,7 +14,12 @@ void print(list<int> l){
 void InsertAtAnyPosition(list<int>&l,int index,int value){
     auto it = l.begin();
     advance(it,index);
-    l.insert(it,22);
+    l.insert(it,value);
+}
+void DeleteAtAnyPosition(list<int>&l,int index){
+    auto it = l.begin();
+    advance(it,index);
+    l.erase(it);
 }
 int main(){
     list<int> l;
@@ -36,5 +41,8 @@ int main(){
     print(l);
     //insert at any position
     InsertAtAnyPosition(l,2,33);
+    print(l);
+    //delete at any position
+    DeleteAtAnyPosition(l,2);
     print(l);
 }
