@@ -12,6 +12,8 @@
 - There are two ways to deallocate or delete dynamic array while their is no need of that array in order to free space
     - `delete[] arr;` is one way. But in this way it may cause system crush
     - `arr = NULL;` is the best practice to deallocate dynamic array
+# Vector
+# Array vs Vector
 # Pointer
 - One of the common use of pointer is with array
 ## Structre of a void pointer/ dynamic type pointer
