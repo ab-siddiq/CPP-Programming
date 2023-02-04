@@ -13,7 +13,10 @@
     - `delete[] arr;` is one way. But in this way it may cause system crush
     - `arr = NULL;` is the best practice to deallocate dynamic array
 # Vector
+
 # Array vs Vector
+- Array size can be changed on run time while vector size can be changed
+- Vector provide some build in functionlity which help the user to use it.
 # Pointer
 - One of the common use of pointer is with array
 ## Structre of a void pointer/ dynamic type pointer
