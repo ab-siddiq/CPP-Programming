@@ -147,6 +147,7 @@ int main(){
 ## Queue
 - FIFO-First In First Out
 - FCFS-First Come First Serve
+# STL
 ### When we need queue?
 - WHen we need things happen exact order they were called but computer cannot keep up speed and execute those thing first enough first enough then we need to put those things in a queue.
 - Ex-The way printer printed the paper
