@@ -55,6 +55,7 @@ int main(){
     q.Dequeue();
     q.Dequeue();
     q.Dequeue();
+    q.Dequeue();
     cout<<"Size: "<<q.Size()<<"\n";
     cout<<"Front: "<<q.Front()<<"\n";
     q.Enqueue(7);
