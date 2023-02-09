@@ -1,84 +1,104 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
-class Queue{
-    public:
-    int l,r,size;
+class Queue
+{
+public:
+    int l, r, size;
     int *a;
     int array_capacity;
-    Queue(){
-        l=0;r=-1,size=0;
-        a= new int[1];
-        array_capacity=1;
+    Queue()
+    {
+        l = 0;
+        r = -1, size = 0;
+        a = new int[1];
+        array_capacity = 1;
     }
-    void removeCicular(){
-        int* temp = new int[array_capacity];
-        int index=0;
-        for(int i=l;i<array_capacity;i++){
-            temp[index]=a[i];
+    void removeCicular()
+    {
+        int *temp = new int[array_capacity];
+        int index = 0;
+
+        for (int i = l; i < array_capacity; i++)
+        {
+            temp[index] = a[i];
             index++;
         }
-        for(int i=0;i<=r;i++){
-            temp[index]=a[i];
+        for (int i = 0; i <= r; i++)
+        {
+            temp[index] = a[i];
             index++;
         }
-        swap(a,temp);
-        l=0;
-        r=array_capacity-1;
-        delete []temp;
+        swap(a, temp);
+        l = 0;
+        r = array_capacity - 1;
+        delete[] temp;
     }
-    void increaseSize(){
-        if(l>r){
+    void increaseSize()
+    {
+        if (l > r)
+        {
+
             removeCicular();
         }
-        int* temp = new int[array_capacity*2];
-        for(int i=0;i<array_capacity;i++)
-            temp[i]=array_capacity*2;
-        swap(a,temp);
-        array_capacity*=2;
-        delete []temp;
+        int *temp = new int[array_capacity * 2];
+        for (int i = 0; i < array_capacity; i++)
+            temp[i] = a[i];
+        swap(a, temp);
+        array_capacity = array_capacity * 2;
+        delete[] temp;
     }
-    void Enqueue(int value){
-        if(size==array_capacity){
-           increaseSize();
+    void Enqueue(int value)
+    {
+        if (size == array_capacity)
+        {
+            increaseSize();
         }
         r++;
-        if(r==array_capacity){
-            r=0;
+        if (r == array_capacity)
+        {
+            r = 0;
         }
-        a[r]=value;
+        a[r] = value;
         size++;
     }
-    void Dequeue(){
-        if(size==0){
-            cout<<"Queue is empty!\n";
+    void Dequeue()
+    {
+        if (size == 0)
+        {
+            cout << "Queue is empty!\n";
             return;
         }
         l++;
-        if(l==array_capacity){
-            l=0;
+        if (l == array_capacity)
+        {
+            l = 0;
         }
         size--;
     }
-    int Front(){
-        if(size==0){
-            cout<<"Queue is empty!\n";
+    int Front()
+    {
+        if (size == 0)
+        {
+            cout << "Queue is empty!\n";
             return -1;
         }
         return a[l];
     }
-    int Size(){
+    int Size()
+    {
         return size;
     }
 };
-int main(){
+int main()
+{
     Queue q;
     q.Enqueue(1);
     q.Enqueue(2);
     q.Enqueue(3);
     q.Enqueue(4);
     q.Enqueue(5);
-    cout<<"Size: "<<q.Size()<<"\n";
-    cout<<"Front: "<<q.Front()<<"\n";
+    cout << "Size: " << q.Size() << "\n";
+    cout << "Front: " << q.Front() << "\n";
     q.Dequeue();
     q.Dequeue();
     q.Dequeue();
