@@ -1,45 +1,32 @@
 #include<bits/stdc++.h>
 using namespace std;
-/*
-    Deque => Double Ended Queue
-*/
+template<class T>
 class node{
     public:
-    int data;
+    T data;
     node* next;
     node* prev;
 };
+template<class T>
 class Deque{
     public:
     int size;
-    node* head;
-    node* tail;
+    node<T>* head;
+    node<T>* tail;
     Deque(){
-        size=0;
         head=NULL;
         tail=NULL;
+        size=0;
     }
-    node* CreateNewNode(int data){
-        node* newNode = new node;
+    node<T>* CreateNewNode(T data){
+        node<T>* newNode = new node<T>;
+        newNode->data=data;
         newNode->next=NULL;
         newNode->prev=NULL;
         return newNode;
     }
-    void PushBack(int data){
-        node* newNode = CreateNewNode(data);
-        if(size==0){
-            head=newNode;
-            tail=newNode;
-            size++;
-            return;
-        }
-        tail->next=newNode;
-        newNode->prev=tail;
-        tail=newNode; 
-        size++;
-    }
-    void PushFront(int data){
-        node* newNode = CreateNewNode(data);
+    void PushFront(T data){
+        node<T>* newNode = CreateNewNode(data);
         if(size==0){
             head=newNode;
             tail=newNode;
@@ -51,7 +38,58 @@ class Deque{
         head=newNode;
         size++;
     }
+    T Front(){
+        if(size==0){
+            cout<<"Deque is empty!\n";
+            T a;
+            return a;
+        }
+        return head->data;
+    }
+    void PopFront(){
+        node<T>* a = head;
+        if(size==0){
+            cout<<"Deque is empty!\n";
+            return;
+        }
+        if(size==1){
+            delete head;
+            head=NULL;
+            tail==NULL;
+            size--;
+            return;
+        }
+        head=a->next;
+        delete a;
+        size--;
+    }
+    void PushBack(T data){
+        node<T>* newNode = CreateNewNode(data);
+        if(size==0){
+            head=newNode;
+            tail=newNode;
+            size++;
+            return;
+        }
+        tail->next=newNode;
+        newNode->prev=tail;
+        tail=newNode;
+        size++;
+    }
+    T Back(){
+        if(size==0){
+            cout<<"Deque is empty!\n";
+            T a;
+            return a;
+        }
+        return tail->data;
+    }
     void PopBack(){
+        node<T>* a = tail;
+        if(size==0){
+            cout<<"Deque is empty!\n";
+            return;
+        }
         if(size==1){
             delete tail;
             head=NULL;
@@ -59,31 +97,21 @@ class Deque{
             size--;
             return;
         }
-        node* a = tail;
-        tail=tail->prev;
+        tail=a->prev;
         tail->next=NULL;
         delete a;
         size--;
     }
-    void PopFront(){
-        if(size==1){
-            delete head;
-            head=NULL;
-            tail=NULL;
-            size--;
+    void Traverse(){
+        node<T>* a = head;
+        if(size==0){
+            cout<<"Deque is empty!\n";
             return;
         }
-        node* a = head;
-        head=head->next;
-        head->prev=NULL;
-        delete a;
-        size--;
-    }
-    void Traverse(){
-        node* a = head;
-        while(a!=NULL){
+        while (a!=NULL)
+        {
             cout<<a->data<<" ";
-            a=a->next;        
+            a=a->next;
         }
         cout<<"\n";
     }
@@ -92,10 +120,33 @@ class Deque{
     }
 };
 int main(){
-    Deque d;
-    d.PushBack(1);
-    d.PushBack(2);
-    d.PushBack(2);
-    d.Traverse();
-    cout<<"size: "<<d.Size()<<"\n";
+    Deque<char> d;
+    d.PushFront('a');
+    d.PushFront('b');
+    d.PushFront('c');
+    cout<<"Deque: ";d.Traverse();
+    cout<<"Front: "<<d.Front()<<"\n";
+    cout<<"Back: "<<d.Back()<<"\n";
+    cout<<"Size: "<<d.Size()<<"\n";
+    d.PushBack('d');
+    d.PushBack('e');
+    d.PushBack('f');
+    cout<<"Deque: ";d.Traverse();
+    cout<<"Front: "<<d.Front()<<"\n";
+    cout<<"Back: "<<d.Back()<<"\n";
+    cout<<"Size: "<<d.Size()<<"\n";
+    // d.PopBack();
+    // d.PopBack();
+    // d.PopBack();
+    // cout<<"Deque: ";d.Traverse();
+    // cout<<"Front: "<<d.Front()<<"\n";
+    // cout<<"Back: "<<d.Back()<<"\n";
+    // cout<<"Size: "<<d.Size()<<"\n";
+    // d.PopFront();
+    // d.PopFront();
+    // d.PopFront();
+    // cout<<"Deque: ";d.Traverse();
+    // cout<<"Front: "<<d.Front()<<"\n";
+    // cout<<"Back: "<<d.Back()<<"\n";
+    // cout<<"Size: "<<d.Size()<<"\n";
 }
