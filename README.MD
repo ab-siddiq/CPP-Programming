@@ -13,7 +13,10 @@
     - `delete[] arr;` is one way. But in this way it may cause system crush
     - `arr = NULL;` is the best practice to deallocate dynamic array
 # Vector
+
 # Array vs Vector
+- Array size can be changed on run time while vector size can be changed
+- Vector provide some build in functionlity which help the user to use it.
 # Pointer
 - One of the common use of pointer is with array
 ## Structre of a void pointer/ dynamic type pointer
@@ -144,6 +147,7 @@ int main(){
 ## Queue
 - FIFO-First In First Out
 - FCFS-First Come First Serve
+# STL
 ### When we need queue?
 - WHen we need things happen exact order they were called but computer cannot keep up speed and execute those thing first enough first enough then we need to put those things in a queue.
 - Ex-The way printer printed the paper
