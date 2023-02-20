@@ -164,3 +164,7 @@ int main(){
 - Has 0 to n nodes
 - Every node or child can have only one parent
 - There can't have to have any cicle
+### Binary Tree
+- Every node have atmost(not more) two child
+
+![image](https://user-images.githubusercontent.com/24230435/220171587-15d28012-28a3-46ce-8c71-d744ad60acbd.png)
