@@ -162,9 +162,20 @@ int main(){
     - size()
 ## Tree
 - Has 0 to n nodes
+- Only root don't have any parent
 - Every node or child can have only one parent
-- There can't have to have any cicle
+- There can't have to have any cicle (start from one end and end at starting
+
+![image](https://user-images.githubusercontent.com/24230435/220173513-e5e856f2-4b78-42a2-b744-8087fd2a0bb8.png)
+
 ### Binary Tree
 - Every node have atmost(not more) two child
 
 ![image](https://user-images.githubusercontent.com/24230435/220171587-15d28012-28a3-46ce-8c71-d744ad60acbd.png)
+
+## Graph
+- Use to find path 
+- Have node/vertex
+- Have edge (pair of node)
+
+![image](https://user-images.githubusercontent.com/24230435/220172835-1b2462ea-e63f-4812-b9c8-650316d35ecb.png)
