@@ -173,6 +173,19 @@ int main(){
 
 ![image](https://user-images.githubusercontent.com/24230435/220174313-777d971e-af5d-4404-a31e-f21f9dc0d213.png)
 
+Types of binary tree
+1. Full Binary Tree - Every node has 0 or 2 children `Not full binary tree not complete binary tree`
+
+![image](https://user-images.githubusercontent.com/24230435/220174908-ecde515b-eab6-4d15-9cc4-e8a30bda4b14.png)
+
+2. Complete Binary Tree - All level filled up except last level `Not full binary tree not perfect binary tree`
+
+![image](https://user-images.githubusercontent.com/24230435/220175742-ea52a51e-5b06-4858-b5f9-73765f70d860.png)
+
+3. Perfect Binary Tree - Every level filled up. `Every perfect binary tree is complete binary tree`
+
+![image](https://user-images.githubusercontent.com/24230435/220176893-4b5eca9c-507d-48df-a771-add12baba680.png)
+
 ## Graph
 - Use to find path 
 - Have node/vertex
