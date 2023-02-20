@@ -171,7 +171,7 @@ int main(){
 ### Binary Tree
 - Every node have atmost(not more) two child
 
-![image](https://user-images.githubusercontent.com/24230435/220171587-15d28012-28a3-46ce-8c71-d744ad60acbd.png)
+![image](https://user-images.githubusercontent.com/24230435/220174313-777d971e-af5d-4404-a31e-f21f9dc0d213.png)
 
 ## Graph
 - Use to find path 
