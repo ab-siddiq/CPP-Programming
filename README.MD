@@ -160,3 +160,7 @@ int main(){
     - back()
     - empty()
     - size()
+## Tree
+- Has 0 to n nodes
+- Every node or child can have only one parent
+- There can't have to have any cicle
