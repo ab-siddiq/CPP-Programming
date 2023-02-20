@@ -189,7 +189,8 @@ Types of binary tree
 ### Binary Search Tree
 - If we pick a node all node of left side of that node is small and right side of that node is greated is a binary search tree
 BFS-Breadth First Search - visit level wise
-![image](https://user-images.githubusercontent.com/24230435/220207718-cb995226-c94b-413a-83e7-1debe8f0f7bd.png)
+
+![image](https://user-images.githubusercontent.com/24230435/220210807-4c5c9a55-cc6f-4594-8db7-41226b613598.png)
 
 ## Graph
 - Use to find path 
