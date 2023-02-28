@@ -1,36 +1,37 @@
 #include <bits/stdc++.h>
 using namespace std;
-class node
+class Node
 {
 public:
-    int data;
-    node *next;
-    node *prev;
+   int value;
+	Node* nxt;
+	Node* prv;
+
 };
-class DoublyLinkedList
+class LinkedList
 {
 public:
     int size;
-    node *head;
-    node *tail;
-    DoublyLinkedList()
+    Node *head;
+    Node *tail;
+    LinkedList()
     {
         size = 0;
         head = NULL;
         tail = NULL;
     }
-    node *CreateNewNode(int data)
+    Node *CreateNewNode(int value)
     {
-        node *newNode = new node;
-        newNode->data = data;
-        newNode->next = NULL;
-        newNode->prev = NULL;
+        Node *newNode = new Node;
+        newNode->value = value;
+        newNode->nxt = NULL;
+        newNode->prv = NULL;
         return newNode;
     }
     void insertHead(int value)
     {
         
-        node *newNode = CreateNewNode(value);
+        Node *newNode = CreateNewNode(value);
         if (size == 0)
         {
             size++;
@@ -39,12 +40,12 @@ public:
             return;
         }
         size++;
-        newNode->next = head;
-        head->prev = newNode;
+        newNode->nxt = head;
+        head->prv = newNode;
         head = newNode;
     }
     void insertTail(int value){
-        node *newNode = CreateNewNode(value);
+        Node *newNode = CreateNewNode(value);
         if (size == 0)
         {
             size++;
@@ -53,12 +54,12 @@ public:
             return;
         }
         size++;
-        newNode->prev=tail;
-        tail->next=newNode;
+        newNode->prv=tail;
+        tail->nxt=newNode;
         tail=newNode;
     }
     void insertMid(int value){
-        node *newNode = CreateNewNode(value);
+        Node *newNode = CreateNewNode(value);
         if (size == 0)
         {
             size++;
@@ -72,29 +73,26 @@ public:
         }
         int count=0;
         int mid = size/2;
-        node* a = head;
-        cout<<mid<<" m\n";
+        Node* a = head;
         while (count!=mid){
-            a=a->next;
+            a=a->nxt;
             count++;
         }
-        cout<<a->data<<" d\n";
-        cout<<count<<" c\n";
         size++;
-        node* b = a->prev;
-        newNode->next=a;
-        a->prev=newNode;
-        newNode->prev=b;
-        b->next=newNode;
+        Node* b = a->prv;
+        newNode->nxt=a;
+        a->prv=newNode;
+        newNode->prv=b;
+        b->nxt=newNode;
         
     }
-    void Traverse()
+    void print()
     {
-        node *a = head;
+        Node *a = head;
         while (a != NULL)
         {
-            cout << a->data << " ";
-            a=a->next;
+            cout << a->value << " ";
+            a=a->nxt;
         }
         cout << "\n";
     }
@@ -104,16 +102,18 @@ public:
 };
 int main()
 {
-    DoublyLinkedList dl;
+    LinkedList dl;
     dl.insertHead(1);
     dl.insertHead(2);
     dl.insertHead(3);
     dl.insertTail(-1);
     dl.insertTail(-2);
-    dl.Traverse();
+    dl.print();
     cout<<dl.Size()<<"\n";
     dl.insertMid(11);
+    dl.print();
+    cout<<dl.Size()<<"\n";
     dl.insertMid(12);
-    dl.Traverse();
+    dl.print();
     cout<<dl.Size()<<"\n";
 }
