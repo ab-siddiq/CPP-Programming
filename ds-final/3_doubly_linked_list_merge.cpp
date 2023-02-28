@@ -108,12 +108,12 @@ public:
             cout<<"Linked list are empty!\n";
             return;
         }
-        Node* x = a.head;
-        Node* z = a.tail;
-        Node* y = tail;
-        y->nxt=x;
-        x->prv=y;
-        y=z;
+        // Node* x = a.head;
+        // Node* z = a.tail;
+        // Node* y = tail;
+        tail->nxt=a.head;
+        a.head->prv=tail;
+        tail=a.tail;
     }
 };
 int main()
