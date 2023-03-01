@@ -38,6 +38,7 @@ class MaxHeap{
         
     }
     void Delete(int idx){
+        if(idx>=nodes.size()) return;
         swap(nodes[idx],nodes[nodes.size()-1]);
         nodes.pop_back();
         down_heapify(idx);
@@ -47,6 +48,20 @@ class MaxHeap{
             cout<<nodes[i]<<" ";
         }
         cout<<"\n";
+    }
+    int getMax(){
+        if(nodes.empty()){
+            cout<<"Heap is empty!\n";
+            return -1;
+        }
+        return nodes[0];
+    }
+    int getMin(){
+        if(nodes.empty()){
+            cout<<"Heap is empty!\n";
+            return -1;
+        }
+        return nodes[nodes.size()-1];
     }
 };
 int main(){
@@ -62,4 +77,6 @@ int main(){
     mh.PrintHeap();
     mh.Delete(0);
     mh.PrintHeap();
+    cout<<mh.getMax()<<"\n";
+    cout<<mh.getMin()<<"\n";
 }
