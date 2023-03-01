@@ -61,19 +61,30 @@ class MaxHeap{
             cout<<"Heap is empty!\n";
             return -1;
         }
-        return nodes[nodes.size()-1];
+        int min=nodes[0];
+        for(int i=0;i<nodes.size();i++){
+            if(min>nodes[i]) min =nodes[i];
+        }
+        return min;
     }
 };
 int main(){
     MaxHeap mh;
+    // mh.insert(8);
+    // mh.insert(7);
+    // mh.insert(4);
+    // mh.insert(6);
+    // mh.insert(5);
+    // mh.insert(3);
+    // mh.insert(2);
+    // mh.insert(12);
     mh.insert(8);
     mh.insert(7);
-    mh.insert(4);
     mh.insert(6);
-    mh.insert(5);
+    mh.insert(4);
     mh.insert(3);
+    mh.insert(1);
     mh.insert(2);
-    // mh.insert(12);
     mh.PrintHeap();
     mh.Delete(0);
     mh.PrintHeap();
