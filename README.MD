@@ -168,6 +168,23 @@ int main(){
 
 ![image](https://user-images.githubusercontent.com/24230435/220173513-e5e856f2-4b78-42a2-b744-8087fd2a0bb8.png)
 
+### BFS - Breadth First Search
+- Visit level wise
+
+![image](https://user-images.githubusercontent.com/24230435/222434043-b0954087-4fe4-45a3-9bda-97982f9b6b59.png)
+
+Simulation   
+- First root node is push to the queue
+- step 1 => queue = {0}
+- step 2 => pop(0), push 0 left and right child, queue = {1,2}   
+- step 3 => pop(1) push 1 left and right child, queue = {2,3,4}
+- step 4 => pop(2), push 2 left and right child queue = {3,4,5,6}
+- step 5 => pop(3) push 3 left and right child, queue = {4,5,6} [3 left and right is null so nothing will push]
+- step 6 => pop(4), push 4 left and right child, queue = {5,6} [4eft and right is null so nothing will push]
+- step 7 => pop(5), push 5 left and right child, queue = {6} [5 eft and right is null so nothing will push]
+- step 8 => pop(6}, push 6 left and right child, queue = {} [6left and right is null so nothing will push]   
+Note: as queue is empty all node has been visited
+
 ### Binary Tree
 - Every node have atmost(not more) two child
 
