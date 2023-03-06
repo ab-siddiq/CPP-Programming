@@ -237,6 +237,21 @@ Noted: A directed or undirected graph can be weighted or unweighted
 
 ![image](https://user-images.githubusercontent.com/24230435/222955029-fad548b4-4cdb-4e7b-8cdf-719c8fde9ae7.png)
 
+### Graph Representation
+- Adjacency Matrix  
+
+![image](https://user-images.githubusercontent.com/24230435/223105160-c3dfc443-6963-41a0-8baa-3e52178f3be1.png)
+
+![image](https://user-images.githubusercontent.com/24230435/223110155-d44c754c-ec98-48e8-9866-38d8b5a98a6d.png)
+
+
+
+
+- Adjacency List
+
+
+
+- Edge List
 
 ## STL - Standartd Template Library 
 - Vector
