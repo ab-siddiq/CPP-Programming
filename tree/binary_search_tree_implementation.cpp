@@ -42,6 +42,20 @@ class BinarySearchTree{
             prev->left=newNode;
         }
     }
+    bool Search(int value){
+        node* curr = root;
+        while (curr!=NULL)
+        {
+            if(value>curr->value){
+                curr=curr->right;
+            }else if(value<curr->value){
+                curr=curr->left;
+            }else{
+                return true;
+            }
+        }
+        return false;
+    }
     void BFS(){
         queue<node*>q;
         q.push(root);
@@ -73,4 +87,5 @@ int main(){
     bst.InsertAtBinarySearchTree(4);
     bst.InsertAtBinarySearchTree(2);
     bst.BFS();
+    cout<<bst.Search(2)<<"\n";
 }
