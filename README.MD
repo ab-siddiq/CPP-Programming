@@ -216,7 +216,44 @@ BFS-Breadth First Search - visit level wise
 
 ![image](https://user-images.githubusercontent.com/24230435/220172835-1b2462ea-e63f-4812-b9c8-650316d35ecb.png)
 
-## STL - Standartd Template Library
+### Variatio of graphs
+- Weighted Graph
+- Unweighted Graph
+
+![image](https://user-images.githubusercontent.com/24230435/222952913-e35d2167-8d69-40e0-9b08-e9f9450f1c8e.png)
+
+- Directed graph
+- Undirected graph
+
+![image](https://user-images.githubusercontent.com/24230435/222953851-075a0d2e-b868-45d0-a0db-70c0c78e1e06.png)
+
+Noted: A directed or undirected graph can be weighted or unweighted
+
+- Bipartite graph => If we divide a grap by two part one part can be connected to another part but can not be connected inside the node in same part
+
+![image](https://user-images.githubusercontent.com/24230435/222954861-fb286fce-a899-407a-8649-6eeb29d2600d.png)
+
+- Complete graph => a graph which all node is connected with each other is called complete graph
+
+![image](https://user-images.githubusercontent.com/24230435/222955029-fad548b4-4cdb-4e7b-8cdf-719c8fde9ae7.png)
+
+### Graph Representation
+- Adjacency Matrix  
+
+![image](https://user-images.githubusercontent.com/24230435/223105160-c3dfc443-6963-41a0-8baa-3e52178f3be1.png)
+
+![image](https://user-images.githubusercontent.com/24230435/223110155-d44c754c-ec98-48e8-9866-38d8b5a98a6d.png)
+
+
+
+
+- Adjacency List
+
+
+
+- Edge List
+
+## STL - Standartd Template Library 
 - Vector
 - Stack
 - Queue
