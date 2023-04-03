@@ -17,6 +17,7 @@ int main()
     for(int i=1;i<=edges;i++){
         int u,v;
         cin>>u>>v;
+        //for directed graph just comment the second line 
         adjacencyList[u].push_back(v);
         adjacencyList[v].push_back(u);
     }
