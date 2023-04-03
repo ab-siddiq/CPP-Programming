@@ -17,7 +17,7 @@ int main(){
         adjacencyMatrix[v][u]=1;
     }
     for(int i=1;i<=n;i++){
-        for(int j=1;j<=m;j++)
+        for(int j=1;j<=n;j++)
             cout<<adjacencyMatrix[i][j]<<" ";
         cout<<"\n";
     }
