@@ -262,3 +262,8 @@ Noted: A directed or undirected graph can be weighted or unweighted
 - Set
 - Multiset
 - Map
+
+## Topological sort
+- graph should be directed
+- there is no cycle in the graph
+- topological sort of a directed graph is linear orderning of its vertices such that every directed edge UV from vertices U to V, where U comes before V. U -----> V.
