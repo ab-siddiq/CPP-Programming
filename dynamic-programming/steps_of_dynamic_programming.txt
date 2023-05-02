@@ -1,0 +1,30 @@
+1. Memoization/Recursive/Top-down
+2. Tabulation/Iterative/Bottom-up
+
+Steps for dynacmic programming
+1. Define state
+2. Identify the recursive equation from the smaller subproblems
+3. Define base cases
+
+ex
+
+1. fib(n) -> n -> caculates the nth fibonacci number
+2. fib(n) = fib(n-1)+fib(n-2)
+3. fib(1) = 1, fib(2) =1
+
+Memoization-method (recursive)
+====================================
+fun(n, a, b, c, .....){
+    //1. handle base case
+    //2. if current state is already solved, return the result
+    //3. caculate the result from smaller sub-problems
+}
+
+Tabulation-method (Iterative)
+=================================
+
+main(){
+    //1. handle base case
+    //2. loop through the state 
+        //2.1 . and caculate the answer from smaller sub problems
+}
